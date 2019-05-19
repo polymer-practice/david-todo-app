@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 
-<dom-module id="todo-app-app">
+<dom-module id="todo-app">
   <template>
     <style>
       :host {
@@ -15,18 +15,18 @@
      * @customElement
      * @polymer
      */
-    class TodoAppApp extends Polymer.Element {
-      static get is() { return 'todo-app-app'; }
+    class TodoApp extends Polymer.Element {
+      static get is() { return 'todo-app'; }
       static get properties() {
         return {
           prop1: {
             type: String,
-            value: 'todo-app-app'
+            value: 'todo-app'
           }
         };
       }
     }
 
-    window.customElements.define(TodoAppApp.is, TodoAppApp);
+    window.customElements.define(TodoApp.is, TodoApp);
   </script>
 </dom-module>

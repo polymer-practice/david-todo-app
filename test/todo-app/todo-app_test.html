@@ -4,36 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>todo-app-app test</title>
+    <title>todo-app test</title>
 
     <script src="../../../webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../../../web-component-tester/browser.js"></script>
 
-    <link rel="import" href="../../src/todo-app-app/todo-app-app.html">
+    <link rel="import" href="../../src/todo-app/todo-app.html">
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <todo-app-app></todo-app-app>
+        <todo-app></todo-app>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <todo-app-app prop1="new-prop1"></todo-app-app>
+        <todo-app prop1="new-prop1"></todo-app>
       </template>
     </test-fixture>
 
     <script>
-      suite('todo-app-app', function() {
+      suite('todo-app', function() {
 
         test('instantiating the element with default properties works', function() {
           var element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'todo-app-app');
+          assert.equal(element.prop1, 'todo-app');
           var elementShadowRoot = element.shadowRoot;
           var elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello todo-app-app!');
+          assert.equal(elementHeader.innerHTML, 'Hello todo-app!');
         });
 
         test('setting a property on the element works', function() {

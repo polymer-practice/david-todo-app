@@ -1,13 +1,38 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/form-task/form-task.html">
 
 <dom-module id="todo-app">
   <template>
     <style>
       :host {
         display: block;
+        --default-text-color: #FFFFFF;
+        --font-size: 16px;
+        --font-weight: 300;
+        --primary-color: #3D348B;
+        --secondary-color: #7678ED;
+        color: var(--default-text-color);
+        font-family: 'Lato', sans-serif;
+        font-size: var(--font-size, 16px);
+        font-weight: var(--font-weight, 300);
+
+        --text-color-form-task: var(--default-text-color);
+        --font-size-form-task: var(--font-size);
+        --primary-color-form-task: var(--primary-color);
+        --secondary-color-form-task: var(--secondary-color);
+      }
+      .container {
+        display: flex;
+        background-color: var(--primary-color);
+        margin: 0 auto;
+        max-width: 600px;
+        height: 100vh;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <div class="container">
+      <form-task></form-task>  
+    </div>
+    
   </template>
 
   <script>
